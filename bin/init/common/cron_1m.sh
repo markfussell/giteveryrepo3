@@ -15,7 +15,7 @@ exec 2>> ${ERROR}
 
 echo "${ME}: Start  ${START_TSS}" >> ${ERROR}
 
-export REPOS=`find /root/gitrepo/`
+export REPOS=`find /root/gitrepo/ -maxdepth 1 -mindepth 1 `
 for REPO in ${REPOS}; do
     pushd ${REPO}
         git pull
