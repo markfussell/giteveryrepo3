@@ -5,7 +5,7 @@
 #=== all go through a single file
 #================================
 
-cp ./bin/init/cron_1m.sh /root/bin/cron_1m.sh
+cp ./bin/init/common/cron_1m.sh /root/bin/cron_1m.sh
 chmod +x /root/bin/cron_1m.sh
 
 cat <<EOS > /var/spool/cron/root
