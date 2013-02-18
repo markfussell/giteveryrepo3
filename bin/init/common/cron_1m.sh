@@ -13,7 +13,7 @@ mkdir -p /root/log/
 exec 1>> ${LOG}
 exec 2>> ${ERROR}
 
-echo "${ME}: Start  ${START_TSS}" >> ${ERROR}
+echo "${ME}: Start  ${START_TSS}" >> ${LOG}
 
 export REPOS=`find /root/gitrepo/ -maxdepth 1 -mindepth 1 `
 for REPO in ${REPOS}; do
@@ -26,7 +26,5 @@ done
 
 
 export FINISH_TSS="`date +%Y%m%d-%H%M%S`"
-echo "${ME}: Finish ${FINISH_TSS}" >> ${ERROR}
-
-EOS
+echo "${ME}: Finish ${FINISH_TSS}" >> ${LOG}
 
